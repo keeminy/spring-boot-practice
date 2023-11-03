@@ -1,4 +1,7 @@
 spring:
+  output:
+    ansi:
+      enabled: always
   datasource:
     url: jdbc:h2:mem:testdb # jdbc:h2:file:/data/demo
     driver-class-name: org.h2.Driver
@@ -9,3 +12,7 @@ spring:
     defer-datasource-initialization: true
   h2:
     console.enabled: true
+
+management:
+  server:
+    port: 9001
