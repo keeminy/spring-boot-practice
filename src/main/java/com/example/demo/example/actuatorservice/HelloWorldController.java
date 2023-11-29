@@ -1,4 +1,4 @@
-package com.example.demo.actuatorservice;
+package com.example.demo.example.actuatorservice;
 
 import java.util.concurrent.atomic.AtomicLong;
 import org.springframework.stereotype.Controller;
@@ -15,15 +15,7 @@ public class HelloWorldController {
   @GetMapping("/api/hello-world")
   @ResponseBody
   public Greeting sayHello(
-    @RequestParam(
-      name = "name",
-      required = false,
-      defaultValue = "Stranger"
-    ) String name
-  ) {
-    return new Greeting(
-      counter.incrementAndGet(),
-      String.format(template, name)
-    );
+      @RequestParam(name = "name", required = false, defaultValue = "Stranger") String name) {
+    return new Greeting(counter.incrementAndGet(), String.format(template, name));
   }
 }

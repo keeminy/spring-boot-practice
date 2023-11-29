@@ -1,4 +1,4 @@
-package com.example.demo.actuatorservice;
+package com.example.demo.example.actuatorservice;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

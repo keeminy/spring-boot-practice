@@ -1,4 +1,4 @@
-INSERT INTO TB_USER (id, password) VALUES ('admin', '123');
-INSERT INTO TB_USER (id, password) VALUES ('user1', '123');
-INSERT INTO TB_USER (id, password) VALUES ('user2', '123');
+INSERT INTO TB_USER (USER_SQ, USER_ID, USER_PW, USER_ST ) VALUES (1, 'admin', '123', 'U');
+INSERT INTO TB_USER (USER_SQ, USER_ID, USER_PW, USER_ST ) VALUES (2, 'user1', '123', 'U');
+INSERT INTO TB_USER (USER_SQ, USER_ID, USER_PW, USER_ST ) VALUES (3, 'user2', '123', 'U');
 
