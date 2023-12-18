@@ -30,21 +30,19 @@ public class User extends BaseEntity {
 
 	private String userNm;
 
-	@NotEmpty
 	private String userSt;
 
 	@Builder
 	User(int userSq, String userId, String userPw, String userNm, String userSt) {
-        this.userSq = userSq;
-        this.userId = userId;
-        this.userPw = userPw;
-        this.userNm = userNm;
-        this.userSt = userSt;
-    }
+		this.userSq = userSq;
+		this.userId = userId;
+		this.userPw = userPw;
+		this.userNm = userNm;
+		this.userSt = userSt;
+	}
 
-    public Object map(Object object) {
-        return null;
-    }
-
+	public Object map(Object object) {
+		return null;
+	}
 
 }

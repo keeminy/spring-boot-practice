@@ -1,0 +1,51 @@
+Configutation:
+  name: Default
+  status: warn
+
+  Properties:
+    Property:
+      - name: log-path
+        value: ./logs
+      - name: archive
+        value: ${log-path}/archive
+      - name: console-pattern
+        value: "%d{yyyy-MM-dd HH:mm:ss.SSS} %highlight{%-5level} ${sys:PID} [%style{%20.20t}{bright,blue}] %style{%36.36C{1.}}{bright,yellow} : %m%n%ex"
+      - name: file-pattern
+        value: "%d{yyyy-MM-dd HH:mm:ss.SSS} ${LOG_LEVEL_PATTERN:-%5p} ${sys:PID} [%15.15t] %36C{1.} : %m%n$"
+
+  Appenders:
+    Console:
+      name: consoleAppender
+      target: SYSTEM_OUT
+      charset: utf-8
+      PatternLayout:
+        pattern: ${console-pattern}
+    RollingFile:
+      - name: rollingFileAppender
+        fileName: ${log-path}/log.log
+        filePattern: ${log-path}/archive/log.log.%d{yyyy-MM-dd}-%i.log
+        PatternLayout:
+          pattern: ${file-pattern}
+        Policies:
+          TimeBasedTriggeringPolicy:
+            Interval: 1
+            modulate: true
+        DefaultRollOverStrategy:
+          Delete:
+            basePath: "${log-path}/archive"
+            maxDepth: "1"
+            IfAccumulatedFileCount:
+              exceeds: 31
+  Loggers:
+    Root:
+      level: info
+      AppenderRef:
+        - ref: consoleAppender
+        - ref: rollingFileAppender
+    Logger:
+      - name: com.example.demo
+        additivity: false
+        level: info
+        AppenderRef:
+          - ref: consoleAppender
+          - ref: rollingFileAppender

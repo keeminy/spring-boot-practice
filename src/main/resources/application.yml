@@ -13,12 +13,14 @@ spring:
   h2:
     console.enabled: true
 
+jwt:
+  header: Authorization
+  secret: practice
+  token-validity-in-seconds: 86400
+
 management:
   server:
     port: 9001
 
-    
 logging:
-  level:
-    root: info
-    com.example.demo: debug
+  config: classpath:log4j2.yml
