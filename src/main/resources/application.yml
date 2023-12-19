@@ -10,6 +10,10 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     defer-datasource-initialization: true
+    # show-sql: true
+    # properties:
+    #   hibernate:
+    #     format_sql: true
   h2:
     console.enabled: true
 
@@ -23,4 +27,7 @@ management:
     port: 9001
 
 logging:
+  # level:
+  #   root: info
+  #   com.example.demo: info
   config: classpath:log4j2.yml

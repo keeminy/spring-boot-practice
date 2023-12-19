@@ -30,7 +30,7 @@ public class User extends BaseEntity {
 
 	private String userNm;
 
-	private String userSt;
+	private String userSt = "S";
 
 	@Builder
 	User(int userSq, String userId, String userPw, String userNm, String userSt) {

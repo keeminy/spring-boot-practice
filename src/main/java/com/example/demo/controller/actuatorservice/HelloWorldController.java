@@ -1,4 +1,4 @@
-package com.example.demo.example.actuatorservice;
+package com.example.demo.controller.actuatorservice;
 
 import java.util.concurrent.atomic.AtomicLong;
 import org.springframework.stereotype.Controller;

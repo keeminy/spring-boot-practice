@@ -18,21 +18,13 @@
 1. Spring Security Ref.  
    https://spring.io/guides/gs/securing-web/
 
-2. Spring Security + jwt Ref.  
-   https://adjh54.tistory.com/91  
-   https://adjh54.tistory.com/92
+   https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/config/annotation/web/builders/HttpSecurity.html#headers(org.springframework.security.config.Customizer)
 
-   https://github.com/adjh54ir/spring-security-adjh54
-
-3. Spring Security Form Login
+2. Spring Security Form Login
    https://docs.spring.io/spring-security/reference/servlet/authentication/passwords/form.html
 
-https://ws-pace.tistory.com/250
-
-- spring seucirty config 선언
-  https://velog.io/@woosim34/Spring-Security-6.1.0%EC%97%90%EC%84%9C-is-deprecated-and-marked-for-removal-%EC%98%A4%EB%A5%98
-
-- sessionManager.....
-  https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/config/annotation/web/builders/HttpSecurity.html#headers(org.springframework.security.config.Customizer)
-
-https://colabear754.tistory.com/171
+3. Spring Security + jwt Ref.  
+   https://adjh54.tistory.com/91
+   https://github.com/adjh54ir/spring-security-adjh54
+   https://ws-pace.tistory.com/250
+   https://colabear754.tistory.com/171
